@@ -1,0 +1,130 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .: {}
+
+  apps/app1:
+    dependencies:
+      '@pnpm-repro/test1':
+        specifier: workspace:*
+        version: link:../../packages/test1
+      '@trpc/react-query':
+        specifier: 11.0.0-rc.342
+        version: 11.0.0-rc.342(@tanstack/react-query@5.29.2(react@18.2.0))(@trpc/client@10.45.2(@trpc/server@10.45.2))(@trpc/server@10.45.2)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+
+  packages/test1:
+    dependencies:
+      '@trpc/client':
+        specifier: 11.0.0-rc.342
+        version: 11.0.0-rc.342(@trpc/server@11.0.0-rc.342)
+      '@trpc/server':
+        specifier: 11.0.0-rc.342
+        version: 11.0.0-rc.342
+
+packages:
+
+  '@tanstack/query-core@5.29.0':
+    resolution: {integrity: sha512-WgPTRs58hm9CMzEr5jpISe8HXa3qKQ8CxewdYZeVnA54JrPY9B1CZiwsCoLpLkf0dGRZq+LcX5OiJb0bEsOFww==}
+
+  '@tanstack/react-query@5.29.2':
+    resolution: {integrity: sha512-nyuWILR4u7H5moLGSiifLh8kIqQDLNOHGuSz0rcp+J75fNc8aQLyr5+I2JCHU3n+nJrTTW1ssgAD8HiKD7IFBQ==}
+    peerDependencies:
+      react: ^18.0.0
+
+  '@trpc/client@10.45.2':
+    resolution: {integrity: sha512-ykALM5kYWTLn1zYuUOZ2cPWlVfrXhc18HzBDyRhoPYN0jey4iQHEFSEowfnhg1RvYnrAVjNBgHNeSAXjrDbGwg==}
+    peerDependencies:
+      '@trpc/server': 10.45.2
+
+  '@trpc/client@11.0.0-rc.342':
+    resolution: {integrity: sha512-uDqeoG3y0Ef/Qtp7l8nNIG05WnLlerSEIJSUXG2vd4CWHjPra2Po17rcCjl4Rr5Jz+w6eJMn1OvWTk7FBIWR0w==}
+    peerDependencies:
+      '@trpc/server': 11.0.0-rc.342+96bcf23a7
+
+  '@trpc/react-query@11.0.0-rc.342':
+    resolution: {integrity: sha512-zE8F4uNrRVpbz1JRNVpCad89TOq+06HkF4BRo0lqc183fugZ8WAgd7+2lELFJagLH2YvL5N6A2HXomTE0mrbNA==}
+    peerDependencies:
+      '@tanstack/react-query': ^5.25.0
+      '@trpc/client': 11.0.0-rc.342+96bcf23a7
+      '@trpc/server': 11.0.0-rc.342+96bcf23a7
+      react: '>=18.2.0'
+      react-dom: '>=18.2.0'
+
+  '@trpc/server@10.45.2':
+    resolution: {integrity: sha512-wOrSThNNE4HUnuhJG6PfDRp4L2009KDVxsd+2VYH8ro6o/7/jwYZ8Uu5j+VaW+mOmc8EHerHzGcdbGNQSAUPgg==}
+
+  '@trpc/server@11.0.0-rc.342':
+    resolution: {integrity: sha512-q/h8uWQFols0XAyStHN/1rm9gvK5Zeh221rdqQdzYZUTHtjHgseKa90/AGPntVVeaZVm54nXktIMsQA2S7tXCQ==}
+
+  js-tokens@4.0.0:
+    resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
+
+  loose-envify@1.4.0:
+    resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
+    hasBin: true
+
+  react-dom@18.2.0:
+    resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
+    peerDependencies:
+      react: ^18.2.0
+
+  react@18.2.0:
+    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
+    engines: {node: '>=0.10.0'}
+
+  scheduler@0.23.0:
+    resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
+
+snapshots:
+
+  '@tanstack/query-core@5.29.0': {}
+
+  '@tanstack/react-query@5.29.2(react@18.2.0)':
+    dependencies:
+      '@tanstack/query-core': 5.29.0
+      react: 18.2.0
+
+  '@trpc/client@10.45.2(@trpc/server@10.45.2)':
+    dependencies:
+      '@trpc/server': 10.45.2
+
+  '@trpc/client@11.0.0-rc.342(@trpc/server@11.0.0-rc.342)':
+    dependencies:
+      '@trpc/server': 11.0.0-rc.342
+
+  '@trpc/react-query@11.0.0-rc.342(@tanstack/react-query@5.29.2(react@18.2.0))(@trpc/client@10.45.2(@trpc/server@10.45.2))(@trpc/server@10.45.2)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@tanstack/react-query': 5.29.2(react@18.2.0)
+      '@trpc/client': 10.45.2(@trpc/server@10.45.2)
+      '@trpc/server': 10.45.2
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+
+  '@trpc/server@10.45.2': {}
+
+  '@trpc/server@11.0.0-rc.342': {}
+
+  js-tokens@4.0.0: {}
+
+  loose-envify@1.4.0:
+    dependencies:
+      js-tokens: 4.0.0
+
+  react-dom@18.2.0(react@18.2.0):
+    dependencies:
+      loose-envify: 1.4.0
+      react: 18.2.0
+      scheduler: 0.23.0
+
+  react@18.2.0:
+    dependencies:
+      loose-envify: 1.4.0
+
+  scheduler@0.23.0:
+    dependencies:
+      loose-envify: 1.4.0
